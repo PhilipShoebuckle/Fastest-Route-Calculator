@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Location Map</title>
+    <style>
+        #map {
+            height: 70%;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #info {
+            height: 30%;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+        }
+        #clearMarkers, #searchInput, #searchButton, #calcPaths {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #searchInput {
+            width: 80%;
+        }
+        #markerLegend {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info">
+        <input id="searchInput" type="text" placeholder="Search for a location">
+        <button id="searchButton">Search</button>
+        <button id="clearMarkers">Clear Markers</button>
+        <button id="calcPaths">Calculate</button>
+        <div id="travelTime"></div>
+        <p>Marker 1 is Start Location</p>
+        <div id="markerLegend"></div>
+    </div>
+    <script src="script.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluDjMq45E9QmTTG4WBYadqKOTZM66LTk&callback=initMap">
+    </script>
+</body>
+</html>
